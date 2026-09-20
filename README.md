@@ -10,8 +10,6 @@
 
 </div>
 
-<!--iframe src="https://gall.dcinside.com/board/movie/share_movie?no=7184514"></iframe> -->
-
 <br>
 
 ##  주요 기능
@@ -27,7 +25,7 @@
 
 <br>
 
-## 📥 다운로드 및 설치 방법
+##  다운로드 및 설치 방법
 
 이 앱은 구글 플레이 스토어가 아닌 **GitHub를 통해 직접 무료로 배포**됩니다.
 
@@ -37,7 +35,7 @@
 
 <br>
 
-## 🛠 기술 스택
+##  기술 스택
 
 * **Language**: Kotlin
 * **UI**: Jetpack Compose
