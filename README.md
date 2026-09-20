@@ -10,6 +10,8 @@
 
 </div>
 
+<iframe src="https://gall.dcinside.com/board/movie/share_movie?no=7184514"></iframe>
+
 <br>
 
 ##  주요 기능
@@ -22,16 +24,6 @@
   최애 캐릭터, 반려동물, 혹은 투명 배경(PNG) 이미지를 넣어 나만의 폰 꾸미기가 가능합니다.
 * **24시간 미리보기**  
   [▶ 24H] 버튼을 눌러 하루 동안 하늘이 어떻게 변하는지 8초 만에 빠르게 미리 감상할 수 있습니다.
-
-<br>
-
-<!--## 📱 스크린샷
-
-*(이곳에 앱 실행 화면 캡처본을 올려주세요!)*
-
-| ☀️ 낮 (Day) | 🌇 일몰 (Sunset) | 🌙 밤 (Night) | ⚙️ 설정 화면 |
-|:---:|:---:|:---:|:---:|
-| <img src="https://via.placeholder.com/300x600.png?text=Day+Screen" width="200"/> | <img src="https://via.placeholder.com/300x600.png?text=Sunset+Screen" width="200"/> | <img src="https://via.placeholder.com/300x600.png?text=Night+Screen" width="200"/> | <img src="https://via.placeholder.com/300x600.png?text=Settings" width="200"/> |-->
 
 <br>
 
