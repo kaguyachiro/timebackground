@@ -10,7 +10,7 @@
 
 </div>
 
-<iframe src="https://gall.dcinside.com/board/movie/share_movie?no=7184514"></iframe>
+<!--iframe src="https://gall.dcinside.com/board/movie/share_movie?no=7184514"></iframe> -->
 
 <br>
 
