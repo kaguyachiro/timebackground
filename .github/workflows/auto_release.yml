@@ -5,6 +5,9 @@ on:
     branches:
       - master
       - main
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
 
 jobs:
   build_and_release:
@@ -40,8 +43,8 @@ jobs:
           NEW_TAG="1.0.$NEW_X"
           echo "tag=$NEW_TAG" >> $GITHUB_OUTPUT
           
-          # Rename APK for neatness
-          mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/app-$NEW_TAG.apk
+          # Rename APK to a fixed name so the 'latest' download link always works
+          mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/app-release.apk
 
       - name: Create Release and Upload APK
         uses: softprops/action-gh-release@v2
@@ -49,6 +52,6 @@ jobs:
           tag_name: ${{ steps.version.outputs.tag }}
           name: release ${{ steps.version.outputs.tag }}
           body: ""
-          files: app/build/outputs/apk/debug/app-${{ steps.version.outputs.tag }}.apk
+          files: app/build/outputs/apk/debug/app-release.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
