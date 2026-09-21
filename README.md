@@ -29,7 +29,7 @@
 
 이 앱은 구글 플레이 스토어가 아닌 **GitHub를 통해 직접 무료로 배포**됩니다.
 
-1. 우측의 **[Releases]** 탭으로 이동하거나 [여기]([#](https://github.com/kaguyachiro/timebackground/releases/latest/download/app-release.apk)를 클릭합니다.
+1. 우측의 **[Releases]** 탭으로 이동하거나 [여기](https://github.com/kaguyachiro/timebackground/releases/latest/download/app-release.apk)를 클릭합니다.
 2. 최신 버전의 `app-release.apk` 파일을 스마트폰으로 다운로드합니다.
 3. 다운로드한 APK 파일을 실행하여 설치합니다. *(※ 출처를 알 수 없는 앱 설치 허용 필요)*
 
