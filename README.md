@@ -10,6 +10,10 @@
 
 </div>
 
+
+다운로드
+[![Latest Release](https://img.shields.io/github/v/release/kaguyachiro/timebackground?style=for-the-badge&label=Download%20Latest%20APK&logo=android&color=success)](https://github.com/kaguyachiro/timebackground/releases/latest/download/app-release.apk)
+
 <br>
 
 ##  주요 기능
