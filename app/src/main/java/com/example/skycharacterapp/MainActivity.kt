@@ -556,9 +556,17 @@ fun ColorSettingsDialog(
 fun PaletteRow(label: String, topColor: Color, bottomColor: Color, onTopClick: () -> Unit, onBottomClick: () -> Unit) {
     Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 4.dp)) {
         Text(label, modifier = Modifier.weight(1f))
-        Box(modifier = Modifier.size(40.dp).background(topColor).clickable(onClick = onTopClick))
-        Spacer(modifier = Modifier.width(8.dp))
-        Box(modifier = Modifier.size(40.dp).background(bottomColor).clickable(onClick = onBottomClick))
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Text("상단", fontSize = 10.sp, color = Color.Gray)
+            Spacer(modifier = Modifier.height(2.dp))
+            Box(modifier = Modifier.size(36.dp).background(topColor, RoundedCornerShape(4.dp)).border(1.dp, Color.LightGray, RoundedCornerShape(4.dp)).clickable(onClick = onTopClick))
+        }
+        Spacer(modifier = Modifier.width(16.dp))
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Text("하단", fontSize = 10.sp, color = Color.Gray)
+            Spacer(modifier = Modifier.height(2.dp))
+            Box(modifier = Modifier.size(36.dp).background(bottomColor, RoundedCornerShape(4.dp)).border(1.dp, Color.LightGray, RoundedCornerShape(4.dp)).clickable(onClick = onBottomClick))
+        }
     }
 }
 

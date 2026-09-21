@@ -1,0 +1,54 @@
+name: Auto Release APK
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  build_and_release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
+
+      - name: Calculate Next Version Tag
+        id: version
+        run: |
+          LATEST_TAG=$(git describe --tags --match "*1.0.*" --abbrev=0 2>/dev/null || echo "1.0.-1")
+          IFS='.' read -ra ADDR <<< "$LATEST_TAG"
+          X=${ADDR[2]}
+          NEW_X=$((X+1))
+          NEW_TAG="1.0.$NEW_X"
+          echo "tag=$NEW_TAG" >> $GITHUB_OUTPUT
+          
+          # Rename APK for neatness
+          mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/app-$NEW_TAG.apk
+
+      - name: Create Release and Upload APK
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: release ${{ steps.version.outputs.tag }}
+          body: ""
+          files: app/build/outputs/apk/debug/app-${{ steps.version.outputs.tag }}.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
